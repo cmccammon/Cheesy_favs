@@ -1,6 +1,6 @@
 class CheesesController < ApplicationController
   before_action :set_cheese, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user, except: [:index, :show]
   # GET /cheeses
   # GET /cheeses.json
   def index
