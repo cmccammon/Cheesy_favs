@@ -2,7 +2,7 @@
 
 <h1>Listing Cheeses</h1>
 
-<table>
+<table class='table table-striped'>
   <thead>
     <tr>
       <th>Name</th>
@@ -14,13 +14,17 @@
     <% @cheeses.each do |cheese| %>
       <tr>
         <td><%= cheese.name %></td>
-        <td><%= link_to 'Show', cheese %></td>
-        <td><%= link_to 'Edit', edit_cheese_path(cheese) %></td>
-        <td><%= link_to 'Destroy', cheese, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', cheese, class: 'btn btn-default btn-xs' %></td>
+        <td><input type="checkbox"> Add to favorite</td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<div class="checkbox">
+  <label>
+    <input type="checkbox"> Check me out
+  </label>
+</div>
 
 <br>
 

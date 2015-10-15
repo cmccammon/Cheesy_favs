@@ -49,6 +49,8 @@ end
 gem 'faker'
 gem 'kaminari'
 gem 'bcrypt'
+
+
 group :production do
   gem 'puma'
   gem 'rails_12factor'
